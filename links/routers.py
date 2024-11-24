@@ -27,7 +27,7 @@ async def generate(url: HttpUrl, session: AsyncSession = TransactionSessionDep) 
     return short_url
 
 
-@router.get('/{slug}')
+@router.get('/{slug}', include_in_schema=False)
 async def redirect_url(slug: str, session: AsyncSession = SessionDep):
     url_obj = await LinkDAO.find_one_or_none(session=session, filters=LinkModel(slug=slug))
     if not url_obj:
