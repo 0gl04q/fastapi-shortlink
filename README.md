@@ -1,5 +1,7 @@
 # FastAPI ShortLink Generator
 
+![изображение](https://github.com/user-attachments/assets/39a44ab7-f9c7-4faf-a287-46da6aab7424)
+
 This project is a simple URL shortener built using FastAPI. It allows users to generate short links that redirect to the original URL.
 
 ## Features
@@ -23,4 +25,3 @@ docker run -d --name shortlink_container shortlink
 POST /generate - Generate a short link.
 - Request body: `url: https://www.example.com`
 - Response: `http://example:8000/abc123`
-
