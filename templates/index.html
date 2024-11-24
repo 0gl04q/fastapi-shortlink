@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <base href="/">
+  <meta charset="UTF-8">
+  <title>ShortLink - Make Long URLs Short</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+
+<header class="header">
+  <h1 class="logo">
+    <i class="fas fa-link chain-icon"></i>
+    ShortLink
+  </h1>
+  <p>Make your long URLs short and memorable</p>
+</header>
+
+<main class="container">
+  <div class="input-section">
+    <input type="url" class="url-input" placeholder="Paste your long URL here..." required="">
+    <button class="shorten-btn">
+  <i class="fas fa-cut"></i>
+  <span>Shorten</span>
+</button>
+  </div>
+
+  <div class="result">
+    <div class="result-section">
+      <input type="text" class="result-display" readonly="">
+      <button class="copy-btn">
+        <i class="fas fa-copy"></i>
+        Copy
+      </button>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <p>© 2023 ShortLink. All rights reserved.</p>
+</footer>
+
+<script src="/static/js/index.js"></script>
+</body>
+</html>

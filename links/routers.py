@@ -1,7 +1,8 @@
-import os
-
+from fastapi.responses import HTMLResponse, RedirectResponse
+from fastapi.templating import Jinja2Templates
+from fastapi.requests import Request
 from fastapi import APIRouter, HTTPException, status
-from fastapi.responses import RedirectResponse
+
 from pydantic import HttpUrl
 from sqlalchemy.ext.asyncio import AsyncSession
 from links.schemas import LinkModel
@@ -10,6 +11,12 @@ from settings.session_maker import TransactionSessionDep, SessionDep
 from utils.generators import generate_slug, generate_url
 
 router = APIRouter(prefix='', tags=['links'])
+templates = Jinja2Templates(directory='templates')
+
+
+@router.get('/', response_class=HTMLResponse)
+async def index(request: Request):
+    return templates.TemplateResponse('index.html', {'request': request})
 
 
 @router.post('/generate')
