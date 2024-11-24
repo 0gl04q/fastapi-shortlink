@@ -34,6 +34,16 @@ body {
   margin: 1rem;
 }
 
+@media (max-width: 480px) {
+  .logo {
+    font-size: 1.5rem;
+    margin: 0.5rem;
+  }
+  .header p {
+    font-size: 0.9rem;
+  }
+}
+
 .chain-icon {
   animation: chain-rotate 3s infinite linear;
   transform-origin: center;
@@ -54,6 +64,14 @@ body {
   box-shadow: 0 5px 20px rgba(0,0,0,0.1);
 }
 
+@media (max-width: 480px) {
+  .container {
+    width: 95%;
+    padding: 1rem;
+    margin: 1rem auto;
+  }
+}
+
 .input-section, .result-section {
   position: relative;
   width: 100%;
@@ -69,6 +87,14 @@ body {
   font-size: 1rem;
   transition: border-color 0.3s;
   text-align: center;
+}
+
+@media (max-width: 480px) {
+  .url-input, .result-display {
+    font-size: 0.9rem;
+    padding: 0.8rem;
+    padding-right: 90px;
+  }
 }
 
 .url-input:focus {
@@ -94,6 +120,20 @@ body {
   align-items: center;
   justify-content: center;
   gap: 5px;
+}
+
+@media (max-width: 480px) {
+  .shorten-btn, .copy-btn {
+    width: 80px;
+    padding: 0.4rem 0.8rem;
+    font-size: 0.8rem;
+  }
+  .shorten-btn span {
+    display: none;
+  }
+  .shorten-btn i {
+    margin: 0;
+  }
 }
 
 .copy-btn {
@@ -130,6 +170,12 @@ body {
   padding-right: 110px;
 }
 
+@media (max-width: 480px) {
+  .result {
+    margin-top: 1rem;
+  }
+}
+
 @keyframes slideDown {
   from {
     opacity: 0;
@@ -148,6 +194,12 @@ footer {
   color: white;
   text-align: center;
   padding: 1rem;
+}
+
+@media (max-width: 480px) {
+  footer p {
+    font-size: 0.8rem;
+  }
 }
 
 .shortened-url {
