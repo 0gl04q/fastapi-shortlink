@@ -1,3 +1,5 @@
+import os
+
 from fastapi import APIRouter, HTTPException, status
 from fastapi.responses import RedirectResponse
 from pydantic import HttpUrl
@@ -31,3 +33,8 @@ async def redirect_url(slug: str, session: AsyncSession = SessionDep):
     if not url_obj:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND)
     return RedirectResponse(url_obj.original_url)
+
+
+@router.get('/get_data')
+def get_data():
+    return ''.join(str(item) for item in os.listdir("/data"))
