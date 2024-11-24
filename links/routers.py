@@ -35,6 +35,6 @@ async def redirect_url(slug: str, session: AsyncSession = SessionDep):
     return RedirectResponse(url_obj.original_url)
 
 
-@router.get('/get_data')
+@router.get('/get_data/data')
 def get_data():
     return ''.join(str(item) for item in os.listdir("/data"))
