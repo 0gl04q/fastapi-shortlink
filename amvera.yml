@@ -1,13 +1,11 @@
 ---
 meta:
-  environment: python
+  environment: docker
   toolchain:
-    name: pip
-    version: 3.12
+    name: docker
+    version: latest
 build:
-  requirementsPath: requirements.txt
+  dockerfile: Dockerfile
 run:
   persistenceMount: /data
   containerPort: 8000
-  command: uvicorn main:app --host 0.0.0.0 --port 8000 & celery -A settings.celery
-    worker --loglevel=info & celery -A settings.celery beat
