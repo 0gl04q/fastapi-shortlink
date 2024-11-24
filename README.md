@@ -1,4 +1,4 @@
-# FastAPI ShortLink Generator
+# ShortLink
 
 ![изображение](https://github.com/user-attachments/assets/39a44ab7-f9c7-4faf-a287-46da6aab7424)
 
