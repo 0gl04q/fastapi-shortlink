@@ -1,5 +1,9 @@
 FROM python:3.12
 
+RUN mkdir -p /data
+
+RUN chmod 777 /data
+
 WORKDIR /app
 
 COPY requirements.txt ./
